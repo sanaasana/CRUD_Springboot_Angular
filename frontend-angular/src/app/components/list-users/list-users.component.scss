@@ -1,0 +1,30 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.mat-table {
+  width: auto; /* Réduit la largeur du tableau pour qu'il s'ajuste au contenu */
+  max-width: 100%; /* Assure que le tableau ne dépasse pas la largeur de son conteneur */
+  min-width: 30px; /* Définit une largeur minimale pour le tableau */
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 16px;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.mat-cell {
+  background-color: #ffffff;
+}
+
+.mat-table {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}

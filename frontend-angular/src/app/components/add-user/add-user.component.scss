@@ -1,0 +1,29 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pour centrer verticalement en utilisant toute la hauteur de la fenêtre */
+}
+
+.material-form {
+  max-width: 600px; /* Limite la largeur maximale du formulaire */
+  width: 100%; /* Permet au formulaire de s'adapter à la largeur de son conteneur */
+  padding: 20px; /* Ajoute du padding autour du formulaire */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour le style */
+  border-radius: 8px; /* Ajoute des coins arrondis pour le style */
+  background-color: #fff; /* Arrière-plan blanc pour le formulaire */
+}
+
+.mat-form-field {
+  width: 100%; /* Assure que chaque champ de formulaire occupe toute la largeur disponible */
+  margin-bottom: 16px; /* Espace entre les champs */
+}
+
+button {
+  margin-top: 16px; /* Espace au-dessus du bouton */
+}
+
+.error-message {
+  color: red;
+  margin-top: 16px;
+}

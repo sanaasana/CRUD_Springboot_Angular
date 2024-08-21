@@ -1,0 +1,59 @@
+<h2>Add user</h2>
+
+<div class="form-container">
+    <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" class="material-form" novalidate>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Name :</mat-label>
+            <input
+                    matInput
+                    type="text"
+                    id="name"
+                    required
+                    [(ngModel)]="user.name"
+                    name="name"
+                    #username="ngModel"
+            />
+            <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+              name required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Age :</mat-label>
+            <input
+                    matInput
+                    type="number"
+                    id="age"
+                    required
+                    [(ngModel)]="user.age"
+                    name="age"
+                    #age="ngModel"
+            />
+            <mat-error *ngIf="age.invalid && (age.dirty || age.touched)">
+                age Required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Address :</mat-label>
+            <input
+                    matInput
+                    type="text"
+                    id="address"
+                    required
+                    [(ngModel)]="user.address"
+                    name="address"
+                    #address="ngModel"
+            />
+            <mat-error *ngIf="address.invalid && (address.dirty || address.touched)">
+              address required
+            </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">Submit</button>
+
+        <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched)" class="error-message">
+          Please complete all required fields
+        </div>
+    </form>
+</div>

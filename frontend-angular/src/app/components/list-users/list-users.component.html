@@ -1,0 +1,39 @@
+<h2>Liste of users</h2>
+
+<div class="table-container">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="users" class="mat-table">
+
+            <!-- name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nom d'utilisateur </th>
+                <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+            </ng-container>
+
+            <!-- age Column -->
+            <ng-container matColumnDef="age">
+                <th mat-header-cell *matHeaderCellDef> Âge </th>
+                <td mat-cell *matCellDef="let user"> {{user.age}} </td>
+            </ng-container>
+
+            <!-- address Column -->
+            <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef> Adresse </th>
+                <td mat-cell *matCellDef="let user"> {{user.address}} </td>
+            </ng-container>
+
+            <!-- actions Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let user">
+                    <button mat-button (click)="editUser(user)">Edit</button>
+                    <button mat-button color="warn" (click)="deleteUser(user)">Delete</button>
+                </td>
+            </ng-container>
+
+            <!-- Header and Row Definitions -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

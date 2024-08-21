@@ -1,0 +1,57 @@
+<h2>Edit user</h2>
+
+<form (ngSubmit)="onSubmit()" #editUserForm="ngForm" class="material-form" novalidate>
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Name :</mat-label>
+        <input
+                matInput
+                type="text"
+                id="username"
+                required
+                [(ngModel)]="user.name"
+                name="username"
+                #username="ngModel"
+        />
+        <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+          name required
+        </mat-error>
+    </mat-form-field>
+  <br>
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Âge :</mat-label>
+        <input
+                matInput
+                type="number"
+                id="age"
+                required
+                [(ngModel)]="user.age"
+                name="age"
+                #age="ngModel"
+        />
+        <mat-error *ngIf="age.invalid && (age.dirty || age.touched)">
+          age required
+        </mat-error>
+    </mat-form-field>
+  <br>
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Adresse :</mat-label>
+        <input
+                matInput
+                type="text"
+                id="address"
+                required
+                [(ngModel)]="user.address"
+                name="address"
+                #address="ngModel"
+        />
+        <mat-error *ngIf="address.invalid && (address.dirty || address.touched)">
+          address required
+        </mat-error>
+    </mat-form-field>
+  <br>
+    <button mat-raised-button color="primary" type="submit" [disabled]="editUserForm.invalid">Mettre à jour</button>
+
+    <div *ngIf="editUserForm.invalid && (editUserForm.dirty || editUserForm.touched)" class="error-message">
+      Please complete all required fields
+    </div>
+</form>
