@@ -61,7 +61,7 @@ ng serve
 ```
 4. **Access the Application**
 
-- The backend API will be running at http://localhost:8080.
+- The backend API will be running at http://localhost:8081.
 - The Angular frontend will be available at http://localhost:4200.
 
 
@@ -73,8 +73,6 @@ ng serve
 ## Contributing
 Feel free to fork the repository, submit issues, and open pull requests for improvements.
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 - Spring Boot
